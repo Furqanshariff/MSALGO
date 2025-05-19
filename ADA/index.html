@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlgoVisualizer</title>
+    <!-- Add Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-900">
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href="/" class="brand-link">AlgoVisualizer</a>
+        </div>
+        
+        <button class="mobile-menu-btn" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="nav-links">
+            <a href="/" class="nav-link">Home</a>
+            <a href="https://furqanshariff.github.io/Hustlers-Creed/" target="_blank" rel="noopener noreferrer" class="nav-link">About Us</a>
+            <a href="practice.html" class="nav-link">Practice DSA</a>
+        </div>
+
+        <div class="nav-auth">
+            <button class="btn btn-login">Login</button>
+            <button class="btn btn-signup">Sign Up</button>
+        </div>
+    </nav>
+
+    <!-- Add margin-top to account for fixed navbar -->
+    <div class="pt-16">
+        <div class="container">
+            <nav class="sidebar">
+                <h2>Algorithms</h2>
+                <div class="algorithm-select">
+                    <select id="algorithmSelect">
+                        <option value="">Select an Algorithm</option>
+                        <optgroup label="Sorting Algorithms">
+                            <option value="bubbleSort">Bubble Sort</option>
+                            <option value="quickSort">Quick Sort</option>
+                            <option value="mergeSort">Merge Sort</option>
+                        </optgroup>
+                        <optgroup label="Search Algorithms">
+                            <option value="binarySearch">Binary Search</option>
+                            <option value="linearSearch">Linear Search</option>
+                        </optgroup>
+                        <optgroup label="Graph Algorithms">
+                            <option value="dijkstra">Dijkstra's Algorithm</option>
+                        </optgroup>
+                    </select>
+                </div>
+            </nav>
+
+            <div class="main-content">
+                <div class="visualization-container">
+                    <div class="pseudocode-section">
+                        <h3 class="pseudocode-title">Pseudocode: <span id="algorithmName">Select an Algorithm</span></h3>
+                        <div class="pseudocode-content">
+                            <pre id="pseudocodeText">Select an algorithm to view its pseudocode.</pre>
+                        </div>
+                    </div>
+                    <div id="visualization"></div>
+                    <div class="array-display"></div>
+                    <div class="controls">
+                        <button id="startBtn" class="control-btn" disabled>Start</button>
+                        <button id="stopBtn" class="control-btn" disabled>Stop</button>
+                        <button id="nextBtn" class="control-btn" disabled>Next Step</button>
+                        <button id="prevBtn" class="control-btn" disabled>Previous Step</button>
+                        <button id="resetBtn" class="control-btn" disabled>Reset</button>
+                    </div>
+                </div>
+                <div class="explanation">
+                    <h3>Algorithm Explanation</h3>
+                    <p id="explanationText">Select an algorithm to begin visualization.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Core Scripts -->
+    <script src="js/utils.js"></script>
+    <script src="js/pseudocode.js"></script>
+    <script src="js/visualizer.js"></script>
+    
+    <!-- Algorithm Scripts -->
+    <script src="js/algorithms/quickSort.js"></script>
+    <script src="js/algorithms/mergeSort.js"></script>
+    <script src="js/algorithms/bubbleSort.js"></script>
+    <script src="js/algorithms/binarySearch.js"></script>
+    <script src="js/algorithms/linearSearch.js"></script>
+    <script src="js/algorithms/dijkstra.js"></script>
+    
+    <!-- Main Script -->
+    <script src="js/main.js"></script>
+</body>
+</html> 
